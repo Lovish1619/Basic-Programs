@@ -1,0 +1,18 @@
+#Program to guess a number
+n=int(input("Enter the number you want to hide: "))
+chance=int(input("Enter the number of guesses: "))
+for i in range(chance):
+    guess=int(input("Enter your guess: "))
+    if(guess<n):
+        print("Guess a higher number")
+        print("Remaining Chances = ",chance-i-1)
+        if(chance-i-1==0):
+            print("Game Over!!! Better Luck Next Time!!!")
+    elif(guess>n):
+        print("Guess a lower number")
+        print("Remaining Chances = ",chance-i-1)
+        if(chance-i-1==0):
+            print("Game Over!!! Better Luck Next Time!!!")
+    elif(guess==n):
+        print("Your guess is correct\nCongretulations!! You Won!!")
+        break
